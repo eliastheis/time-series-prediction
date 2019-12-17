@@ -19,5 +19,8 @@ pip install keras
 ## Usage
 Start the main.py from the terminal and pass in the csv.file:
 ```
-main.py mydata.csv
+main.py -f data.csv -t true
 ```
+Arguments:
+* -f : filename
+* -t : wheter the csv-file starts with column titles
