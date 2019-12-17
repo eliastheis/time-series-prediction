@@ -9,12 +9,12 @@ For the prediction itself, I used the high-level API keras based on Tensorflow, 
 * keras
 * numpy
 You can install all dependencies via pip like this:
-```
-pip install keras'
+```pip
+pip install keras
 ```
 
 ## Usage
 Start the man.py from the terminal and pass in the csv.file:
-```
+```py
 main.py mydata.csv
 ```
