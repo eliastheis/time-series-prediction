@@ -1,7 +1,7 @@
 #import keras
 #import numpy as np
 import csv
-#from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 from os import path
 import argparse
 
@@ -46,8 +46,6 @@ if __name__ == '__main__':
 					tp = type(value)
 					if tp == int or tp == float:
 						numerical_values.append(value)
-					else:
-						print(value, tp)
 				if len(numerical_values) > 0:
 					data.append(numerical_values)
 	else:
@@ -62,5 +60,7 @@ if __name__ == '__main__':
 			exit(-1)
 	print('the data seems correct')
 	
+	plt.plot(data)
+	plt.show()
 	print(data)
 	

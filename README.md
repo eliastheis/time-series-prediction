@@ -24,3 +24,7 @@ main.py -f data.csv -t true
 Arguments:
 * -f : filename
 * -t : wheter the csv-file starts with column titles
+
+## Example
+As an example I use the Shampoo Sales Dataset. You can download it [here](https://raw.githubusercontent.com/jbrownlee/Datasets/master/shampoo.csv).
+![Image of the dataset](dataset.png)
