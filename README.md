@@ -1,5 +1,5 @@
 # Time Series Prediction (Not finished)
-Simple project for time series prediction with keras
+Simple project for time series prediction with keras written in Python.
 
 In this small project I tried to develop a python script to predict universal time series data.
 My programm reads the data from an csv file and choose every numerical value as input for the nerual network.

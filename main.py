@@ -60,7 +60,10 @@ if __name__ == '__main__':
 			exit(-1)
 	print('the data seems correct')
 	
-	plt.plot(data)
-	plt.show()
-	print(data)
+	# plot the raw data
+	#plt.plot(data)
+	#plt.show()
+	#print(data)
+	
+	
 	
