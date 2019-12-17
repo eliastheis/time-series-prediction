@@ -1,4 +1,4 @@
-# Time Series Prediction
+# Time Series Prediction (Not finished)
 Simple project for time series prediction with keras
 
 In this small project I tried to develop a python script to predict universal time series data.
