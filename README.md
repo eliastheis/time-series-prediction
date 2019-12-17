@@ -28,3 +28,9 @@ Arguments:
 ## Example
 As an example I use the Shampoo Sales Dataset. You can download it [here](https://raw.githubusercontent.com/jbrownlee/Datasets/master/shampoo.csv).
 ![Image of the dataset](dataset.png)
+
+## TODOs
+* prepare data for training (normalization, split in train/test, etc.)
+* build RNN (recurrent nerual network) from keras ((maybe try different models))
+* train model
+* visualize the result

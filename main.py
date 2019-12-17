@@ -65,5 +65,11 @@ if __name__ == '__main__':
 	#plt.show()
 	#print(data)
 	
-	
+	'''
+	todo:
+	* prepare data for training (normalization, split in train/test, etc.)
+	* build RNN (recurrent nerual network) from keras ((maybe try different models))
+	* train model
+	* visualize the result
+	'''
 	
