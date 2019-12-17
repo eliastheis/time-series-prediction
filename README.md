@@ -8,6 +8,7 @@ For the prediction itself, I used the high-level API keras based on Tensorflow, 
 ## Dependencies
 * keras
 * numpy
+
 You can install all dependencies via pip like this:
 ```pip
 pip install keras
