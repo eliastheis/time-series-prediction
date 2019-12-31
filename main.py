@@ -5,6 +5,7 @@ from matplotlib import pyplot as plt
 from os import path
 import argparse
 import numpy as np
+from keras import Sequential
 
 # get arguments from console
 def getArgs():
@@ -34,6 +35,8 @@ if __name__ == '__main__':
 
 	# get terminal arguments
 	args = getArgs()
+	if not args.f or not args.t:
+		exit('arguments f and t required')
 	
 	# load csv data
 	data = []
@@ -72,9 +75,21 @@ if __name__ == '__main__':
 		for j in range(len(data[i])):
 			data[i][j] = map(data[i][j], min, max, 0, 1)
 
+	# split data into training and testing
+	split_index = int(len(data)*0.8)
+	training_data = data[:split_index]
+	testing_data = data[split_index:]
+
+	# bring data into right shape
+	# todo
+
+	# build RNN model
+	model = Sequential()
+	# todo
+
 	'''
-	todo:
-	* prepare data for training (normalization, split in train/test, etc.)
+	TODOs:
+	* prepare data for training (reshaping)
 	* build RNN (recurrent nerual network) from keras ((maybe try different models))
 	* train model
 	* visualize the result
