@@ -30,7 +30,7 @@ As an example, I use the Shampoo Sales Dataset. You can download it [here](https
 ![Image of the dataset](dataset.png)
 
 ## TODOs
-* prepare data for training (normalization, split in train/test, etc.)
+* prepare data for training (reshaping)
 * build RNN (recurrent nerual network) from keras ((maybe try different models))
 * train model
 * visualize the result
