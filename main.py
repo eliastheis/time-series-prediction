@@ -4,14 +4,14 @@ import csv
 from matplotlib import pyplot as plt
 from os import path
 import argparse
+import numpy as np
 
 # get arguments from console
 def getArgs():
 	parser = argparse.ArgumentParser("main.py -f data.csv -t false")
 	parser.add_argument("-f", help="filename of the csv.file", type=str)
 	parser.add_argument("-t", help="wheter the csv-file starts with column titles (true/false)", type=bool)
-	args = parser.parse_args()
-	return args
+	return parser.parse_args()
 
 # tries to convert value to float
 def toNumerical(val):
@@ -24,9 +24,13 @@ def toNumerical(val):
 		except:
 			return val
 
-if __name__ == '__main__':
+# maps the value which is between istart and istop between ostart and ostop
+def map(value, istart, istop, ostart, ostop):
+	if value == 0 or istart == 0 or istop == 0:
+		return 0
+	return ostart + (ostop - ostart) * ((value - istart) / (istop - istart))
 
-	print('Author:', 'Elias Theis')
+if __name__ == '__main__':
 
 	# get terminal arguments
 	args = getArgs()
@@ -49,7 +53,7 @@ if __name__ == '__main__':
 				if len(numerical_values) > 0:
 					data.append(numerical_values)
 	else:
-		print('file "' + args.f + '" does not exists')
+		exit('file "' + args.f + '" does not exists')
 	print(len(data), 'useable lines in "' + args.f + '" found')
 	
 	# check wheter every row has the same amount of columns
@@ -60,11 +64,14 @@ if __name__ == '__main__':
 			exit(-1)
 	print('the data seems correct')
 	
-	# plot the raw data
-	#plt.plot(data)
-	#plt.show()
-	#print(data)
-	
+	# normalize data
+	data = np.array(data)
+	min = data.min()
+	max = data.max()
+	for i in range(len(data)):
+		for j in range(len(data[i])):
+			data[i][j] = map(data[i][j], min, max, 0, 1)
+
 	'''
 	todo:
 	* prepare data for training (normalization, split in train/test, etc.)
